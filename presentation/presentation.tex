@@ -1,0 +1,85 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Topological Data Analysis \& Image Classification
+% Version 1.0 (20211125)
+%
+% Author: River Reger
+% e-mail: river.reger@gmail.com
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+\documentclass[10pt]{beamer}
+\mode<presentation> {
+\usetheme{Frankfurt}
+\usecolortheme{beaver}
+\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides
+}
+\include{Parameters}
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+\title[TDA for Image Classification]{Topological Data Analysis (TDA) for Image Classification}
+\subtitle{Virtual}
+\author[River Reger]{River Reger \\ \href{mailto:river.reger@gmail.com}{river.reger@gmail.com}}
+\date{\small Technical Presentation \\ 2021 November 29} % Date, can be changed to a custom date
+
+\begin{document}
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+\begin{frame}
+\frametitle{Overview}
+\tableofcontents
+\end{frame}
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+\input{Intro_TDA}
+\input{Iris_Data}
+\input{Digits_Data}
+\input{Cancer_Data}
+
+
+%================================================
+\section{Conclusions \& Questions}
+%================================================
+	\begin{frame}
+			\frametitle{Conclusions}
+			\begin{itemize}
+				\item Traditional Data Analysis has seen great progress over the past decade due to the copious amounts of data
+				available paired with ever increasing availability of high performance computing resources.
+				\item TDA offers new and rigorous tools from mathematics for analyzing datasets at a global scale.
+				\item As seen in the simple dataset examples, differences in data can be explained by the inherent homology information that is encoded within the dataset.
+				\item This is a unique tool that can be added to data scientists' toolboxes for more detailed analysis of the underlying shape of data.
+				\item The bottleneck metric must be used with caution as an actual scoring metric.
+				\item The analysis from TDA tends to be less quantitative and more qualitative.
+			\end{itemize}
+	\end{frame}
+		
+	\begin{frame}
+		\frametitle{Future Work}
+		
+		\begin{itemize}
+			\item Since we can extract vectors and images as topological information, more work is needed on the practical meaningfulness of these features under traditional techniques including:
+				\begin{itemize}
+					\item Convolutional Neural Networks (CNNs) on Persistence Images
+					\item Image Segmentation (noise/signal separation) on PIs.
+					\item Support Vector Machines (SVMs) and other classical ML algorithms using persistence diagrams as vector sets.
+				\end{itemize}
+			\item There is a large gap in academia and practice in modalities beyond RGB images or small numerical vectors. Particular areas of interest could include:
+				\begin{itemize}
+					\item Non-image based data (radar waveforms, GDELT text-based data, sentiment analysis, etc.)
+					\item Imagery: SAR (especially 3D SAR), HSI, MWIR, LWIR, Lidar
+					\item Military messaging systems (Link-16 messages), scenario data (laydown parameters)
+					\item Cybersecurity threat analysis
+				\end{itemize}
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}
+		\Huge{\centerline{Questions?}}
+	\end{frame}
+\end{document} 
