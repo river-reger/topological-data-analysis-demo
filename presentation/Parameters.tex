@@ -1,0 +1,121 @@
+%==============================================================================
+% Packages
+%==============================================================================
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage{bbm}
+\usepackage{textpos}
+\usepackage{tikz}
+%==============================================================================
+% Theorem formatting commands.
+%==============================================================================
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}
+\newtheorem{axiom}{Axiom}
+\newtheorem{prop}{Proposition}
+\newtheorem{cor}{Corollary}
+\newtheorem{conj}{Conjecture}
+\newtheorem{rul}{Rule}
+\newtheorem*{thm*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{prop*}{Proposition}
+\newtheorem*{cor*}{Corollary}
+\newtheorem*{conj*}{Conjecture}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+\newtheorem{ex}{Example}
+\newtheorem{pr}{Problem}[section]
+\newtheorem{soln}{Solution}[section]
+\newtheorem{alg}[thm]{Algorithm}
+\newtheorem{ques}[thm]{Question}
+
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+\newtheorem*{obs}{Observation}
+
+%==============================================================================
+% Blackboard Letters
+%==============================================================================
+%\newcommand{\aa}{\mathbb{A}}
+\newcommand{\bb}{\mathbb{B}}
+\newcommand{\cc}{\mathbb{C}}
+\newcommand{\dd}{\mathbb{D}}
+\newcommand{\ee}{\mathbb{E}}
+\newcommand{\ff}{\mathbb{F}}
+%\newcommand{\gg}{\mathbb{G}}
+\newcommand{\hh}{\mathbb{H}}
+\newcommand{\ii}{\mathbb{I}}
+\newcommand{\jj}{\mathbb{J}}
+\newcommand{\kk}{\mathbb{K}}
+%\newcommand{\ll}{\mathbb{L}}
+\newcommand{\mm}{\mathbb{M}}
+\newcommand{\nn}{\mathbb{N}}
+\newcommand{\oo}{\mathbb{O}}
+\newcommand{\pp}{\mathbb{P}}
+\newcommand{\qq}{\mathbb{Q}}
+\newcommand{\rr}{\mathbb{R}}
+%\newcommand{\ss}{\mathbb{S}}
+%\newcommand{\tt}{\mathbb{T}}
+\newcommand{\uu}{\mathbb{U}}
+\newcommand{\vv}{\mathbb{V}}
+\newcommand{\ww}{\mathbb{W}}
+\newcommand{\xx}{\mathbb{X}}
+\newcommand{\yy}{\mathbb{Y}}
+\newcommand{\zz}{\mathbb{Z}}
+
+%==============================================================================
+%Caligraphics
+%==============================================================================
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cZ}{\mathcal{Z}}
+\newcommand{\ca}{\mathcal{a}}
+
+%==============================================================================
+% Custom Commands
+%==============================================================================
+% \tbar{s}  -   Put a bar over a text character s.
+\makeatletter
+\newcommand*{\tbar}[1]{$\bar{\hbox{#1}}\m@th$}
+\makeatother
+
+% $\restr{f}{A}$  -   Restriction of function f to set A.
+\newcommand\restr[2]{{% we make the whole thing an ordinary symbol
+  \left.\kern-\nulldelimiterspace % automatically resize the bar with \right
+  #1 % the function
+  \vphantom{\big|} % pretend it's a little taller at normal size
+  \right|_{#2} % this is the delimiter
+  }}
+		
+%==============================================================================
+% Custom Operators
+%==============================================================================	
+\DeclareMathOperator{\id}{id}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\Int}{Int}
